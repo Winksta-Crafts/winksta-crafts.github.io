@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Spectrum Slate builds modern software solutions for businesses, from websites and business systems to custom applications.">
+  <meta name="keywords" content="Spectrum Slate, business software, software development, web development, custom software, business systems">
+  <meta name="theme-color" content="#0b0d12">
+  <title>Spectrum Slate — Software for Business</title>
+  <style>
+    :root{
+      --bg:#080a0f;--surface:#10131a;--surface2:#151923;--text:#f5f7fb;
+      --muted:#9aa3b2;--line:#252b38;--accent:#8b5cf6;--accent2:#38bdf8;
+      --max:1180px;--radius:22px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:
+      radial-gradient(circle at 80% 10%,rgba(139,92,246,.16),transparent 28rem),
+      radial-gradient(circle at 15% 35%,rgba(56,189,248,.08),transparent 24rem),var(--bg);
+      color:var(--text);line-height:1.6;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(calc(100% - 40px),var(--max));margin:auto}
+    header{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(8,10,15,.72);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.06)}
+    nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-size:1.2rem;font-weight:800;letter-spacing:-.04em;display:flex;align-items:center;gap:10px}
+    .logo-mark{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;font-weight:900;color:#fff}
+    .links{display:flex;gap:28px;align-items:center}
+    .links a{font-size:.92rem;color:#c5cad4;transition:.2s}
+    .links a:hover{color:#fff}
+    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid transparent;border-radius:12px;padding:11px 17px;font-weight:700;transition:.2s}
+    .nav-cta,.btn-primary{background:#fff;color:#080a0f}
+    .nav-cta:hover,.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 35px rgba(255,255,255,.12)}
+    .menu{display:none;background:none;border:0;color:#fff;font-size:1.7rem}
+    section{padding:105px 0}
+    .hero{min-height:100vh;display:flex;align-items:center;padding-top:140px}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);background:rgba(255,255,255,.025);border-radius:999px;padding:7px 12px;color:#cdd3dd;font-size:.8rem;margin-bottom:22px}
+    .dot{width:7px;height:7px;border-radius:50%;background:#4ade80;box-shadow:0 0 12px #4ade80}
+    h1{font-size:clamp(3rem,7vw,6.5rem);line-height:.94;letter-spacing:-.07em;max-width:850px}
+    .gradient{background:linear-gradient(100deg,#fff 15%,#b9a2ff 55%,#6ed8ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p{font-size:1.12rem;color:var(--muted);max-width:650px;margin:27px 0 31px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{padding:14px 20px}
+    .btn-secondary{border-color:var(--line);background:rgba(255,255,255,.025);color:#e8ebf1}
+    .btn-secondary:hover{border-color:#4a5262;background:rgba(255,255,255,.06)}
+    .hero-card{position:relative;border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.015));padding:26px;box-shadow:0 30px 80px rgba(0,0,0,.3)}
+    .window{border:1px solid #29303d;border-radius:20px;background:#0c0f15;overflow:hidden}
+    .window-top{height:45px;border-bottom:1px solid #252b36;display:flex;align-items:center;gap:7px;padding:0 15px}
+    .window-top i{width:9px;height:9px;border-radius:50%;background:#343b49}
+    .dashboard{padding:22px}
+    .dash-title{font-size:1.1rem;font-weight:750;margin-bottom:18px}
+    .metric-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .metric{background:#131720;border:1px solid #252b36;border-radius:14px;padding:16px}
+    .metric small{color:#788292}.metric strong{display:block;font-size:1.45rem;margin-top:3px}
+    .bars{margin-top:14px;height:105px;display:flex;align-items:end;gap:8px;padding:12px;background:#11151d;border:1px solid #252b36;border-radius:14px}
+    .bar{flex:1;border-radius:5px 5px 2px 2px;background:linear-gradient(180deg,#8b5cf6,#38bdf8);opacity:.8}
+    .section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:42px}
+    .section-head h2{font-size:clamp(2rem,4vw,3.5rem);line-height:1;letter-spacing:-.05em}
+    .section-head p{color:var(--muted);max-width:470px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{border:1px solid var(--line);background:rgba(255,255,255,.025);border-radius:var(--radius);padding:28px;min-height:245px;transition:.25s}
+    .card:hover{transform:translateY(-5px);border-color:#3b4352;background:rgba(255,255,255,.045)}
+    .icon{width:45px;height:45px;border-radius:13px;background:linear-gradient(135deg,rgba(139,92,246,.2),rgba(56,189,248,.15));border:1px solid #343142;display:grid;place-items:center;margin-bottom:22px;font-size:1.2rem}
+    .card h3{font-size:1.15rem;margin-bottom:9px}.card p{color:var(--muted);font-size:.95rem}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+    .feature-box{border:1px solid var(--line);border-radius:28px;padding:30px;background:linear-gradient(145deg,rgba(139,92,246,.08),rgba(56,189,248,.03))}
+    .feature-box h3{font-size:2rem;line-height:1.1;margin-bottom:14px}.feature-box p{color:var(--muted)}
+    .checks{display:grid;gap:13px;margin-top:24px}.check{display:flex;gap:11px;align-items:flex-start;color:#d8dce4}.check span{color:#8b5cf6;font-weight:900}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{padding:24px;border:1px solid var(--line);border-radius:18px}.num{font-size:.78rem;color:#8b5cf6;font-weight:800}.step h3{margin:11px 0 7px}.step p{color:var(--muted);font-size:.9rem}
+    .contact-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:35px}
+    .contact-info,.form{border:1px solid var(--line);border-radius:25px;padding:30px;background:rgba(255,255,255,.025)}
+    .contact-info h2{font-size:2.8rem;line-height:1.05;letter-spacing:-.05em;margin-bottom:15px}.contact-info>p{color:var(--muted);margin-bottom:30px}
+    .contact-item{padding:17px 0;border-top:1px solid var(--line)}.contact-item small{display:block;color:#737c8c;margin-bottom:3px}.contact-item a{font-weight:650}
+    form{display:grid;gap:15px}.row{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+    label{font-size:.82rem;color:#adb5c2;display:grid;gap:7px}
+    input,textarea,select{width:100%;border:1px solid #2a303b;background:#0b0e14;color:#fff;border-radius:12px;padding:13px 14px;font:inherit;outline:none}
+    input:focus,textarea:focus,select:focus{border-color:#7160a8;box-shadow:0 0 0 3px rgba(139,92,246,.1)}
+    textarea{min-height:145px;resize:vertical}.form .btn{width:100%;margin-top:4px;cursor:pointer}
+    .notice{font-size:.78rem;color:#697382;text-align:center}
+    footer{border-top:1px solid var(--line);padding:28px 0;color:#737c8b;font-size:.85rem}.footer-inner{display:flex;justify-content:space-between;gap:20px}
+    @media(max-width:900px){.hero-grid,.split,.contact-wrap{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.hero-card{max-width:650px}.hero{padding-top:125px}}
+    @media(max-width:650px){.container{width:min(calc(100% - 28px),var(--max))}section{padding:78px 0}.links{display:none;position:absolute;top:76px;left:0;right:0;padding:20px;background:#0b0e14;border-bottom:1px solid var(--line);flex-direction:column;gap:18px}.links.open{display:flex}.menu{display:block}.nav-cta{display:none}.cards,.steps,.row{grid-template-columns:1fr}.hero h1{font-size:3.5rem}.section-head{display:block}.section-head p{margin-top:16px}.footer-inner{display:block}.footer-inner span{display:block;margin-top:8px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <a href="#home" class="logo"><span class="logo-mark">S</span> Spectrum Slate</a>
+      <div class="links" id="navLinks">
+        <a href="#services">Services</a><a href="#solutions">Solutions</a><a href="#process">Process</a><a href="#about">About</a><a href="#contact">Contact</a>
+      </div>
+      <a class="nav-cta" href="#contact">Start a Project</a>
+      <button class="menu" id="menu" aria-label="Open menu">☰</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow"><span class="dot"></span> Building software for ambitious businesses</div>
+      <h1>Turn business ideas into <span class="gradient">powerful software.</span></h1>
+      <p>Spectrum Slate designs and develops modern digital products that help businesses work smarter, serve customers better, and grow with confidence.</p>
+      <div class="actions"><a class="btn btn-primary" href="#contact">Build With Us →</a><a class="btn btn-secondary" href="#services">Explore Services</a></div>
+    </div>
+    <div class="hero-card">
+      <div class="window">
+        <div class="window-top"><i></i><i></i><i></i></div>
+        <div class="dashboard">
+          <div class="dash-title">Business Overview</div>
+          <div class="metric-grid"><div class="metric"><small>Revenue</small><strong>$48.2K</strong></div><div class="metric"><small>Customers</small><strong>2,840</strong></div></div>
+          <div class="bars"><div class="bar" style="height:35%"></div><div class="bar" style="height:48%"></div><div class="bar" style="height:42%"></div><div class="bar" style="height:65%"></div><div class="bar" style="height:57%"></div><div class="bar" style="height:80%"></div><div class="bar" style="height:92%"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="section-head"><h2>Software that<br>moves business forward.</h2><p>From your first idea to a production-ready platform, we create practical technology around the way your business actually works.</p></div>
+    <div class="cards">
+      <article class="card"><div class="icon">⌘</div><h3>Custom Business Software</h3><p>Purpose-built systems for workflows, operations, customers, teams, reporting, and internal processes.</p></article>
+      <article class="card"><div class="icon">◈</div><h3>Web Applications</h3><p>Fast, responsive web apps and portals that work across phones, tablets, and desktops.</p></article>
+      <article class="card"><div class="icon">▣</div><h3>Business Websites</h3><p>Professional websites designed to establish credibility, explain your services, and generate opportunities.</p></article>
+      <article class="card"><div class="icon">↗</div><h3>Mobile Applications</h3><p>Modern Android and cross-platform experiences built around your customers and business goals.</p></article>
+      <article class="card"><div class="icon">⚙</div><h3>Automation & Integration</h3><p>Connect tools and automate repetitive work so your team can spend more time on valuable tasks.</p></article>
+      <article class="card"><div class="icon">⌁</div><h3>Maintenance & Growth</h3><p>Improve, maintain, secure, and expand your software as your business changes.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="solutions">
+  <div class="container split">
+    <div>
+      <div class="eyebrow">Designed around your business</div>
+      <h2 style="font-size:clamp(2.2rem,5vw,4.2rem);line-height:1;letter-spacing:-.06em">Technology should simplify work, not create more of it.</h2>
+      <p style="color:var(--muted);margin-top:20px">We focus on useful software: clear interfaces, dependable systems, scalable architecture, and features that solve real business problems.</p>
+      <div class="checks">
+        <div class="check"><span>✓</span> Clear and intuitive user experiences</div>
+        <div class="check"><span>✓</span> Scalable foundations for future growth</div>
+        <div class="check"><span>✓</span> Mobile-friendly and modern technology</div>
+        <div class="check"><span>✓</span> Business-focused development</div>
+      </div>
+    </div>
+    <div class="feature-box">
+      <h3>One partner.<br>Many possibilities.</h3>
+      <p>Whether you need a simple company website or a complete business management platform, Spectrum Slate can take the project from concept to launch.</p>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="container">
+    <div class="section-head"><h2>A simple way<br>to build.</h2><p>Good software starts with understanding the problem. Our process keeps the project focused from the first conversation to launch.</p></div>
+    <div class="steps">
+      <div class="step"><div class="num">01 / DISCOVER</div><h3>Understand</h3><p>We learn about your business, goals, users, and the problem you want to solve.</p></div>
+      <div class="step"><div class="num">02 / PLAN</div><h3>Plan</h3><p>We define the product, features, technology, scope, and a practical delivery path.</p></div>
+      <div class="step"><div class="num">03 / BUILD</div><h3>Develop</h3><p>We design and build the software with regular progress and focused testing.</p></div>
+      <div class="step"><div class="num">04 / LAUNCH</div><h3>Deliver</h3><p>Your product goes live, ready for customers and ready to grow with your business.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="feature-box" style="padding:42px">
+      <div class="eyebrow">About Spectrum Slate</div>
+      <h2 style="font-size:clamp(2.3rem,5vw,4rem);line-height:1;letter-spacing:-.06em;max-width:800px">We build digital foundations for businesses that want to move forward.</h2>
+      <p style="max-width:760px;margin-top:20px;color:var(--muted)">Spectrum Slate is a software development company focused on creating modern, reliable, and business-oriented digital solutions. We combine thoughtful design with practical engineering to turn ideas and business challenges into software people can actually use.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container contact-wrap">
+    <div class="contact-info">
+      <div class="eyebrow">Let's talk</div>
+      <h2>Have a software idea?</h2>
+      <p>Tell us what you are trying to build or improve. We will use your message to understand the project and discuss the next step.</p>
+      <div class="contact-item"><small>Email</small><a href="mailto:hello@spectrumslate.com">hello@spectrumslate.com</a></div>
+      <div class="contact-item"><small>Availability</small><span>Monday — Friday</span></div>
+      <div class="contact-item"><small>Projects</small><span>Web · Mobile · Business Software</span></div>
+    </div>
+    <div class="form">
+      <form id="contactForm">
+        <div class="row">
+          <label>Name<input required name="name" placeholder="Your name"></label>
+          <label>Email<input required type="email" name="email" placeholder="you@company.com"></label>
+        </div>
+        <div class="row">
+          <label>Company<input name="company" placeholder="Company name"></label>
+          <label>Project Type<select name="type"><option>Business Software</option><option>Website</option><option>Web Application</option><option>Mobile Application</option><option>Automation / Integration</option><option>Other</option></select></label>
+        </div>
+        <label>Tell us about your project<textarea required name="message" placeholder="What do you want to build?"></textarea></label>
+        <button class="btn btn-primary" type="submit">Send Project Enquiry →</button>
+        <div class="notice">This form opens your email application with the enquiry prepared.</div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <strong>© 2026 Spectrum Slate</strong>
+    <span>Software for business. Built for what comes next.</span>
+  </div>
+</footer>
+
+<script>
+  const menu=document.getElementById('menu'), links=document.getElementById('navLinks');
+  menu.addEventListener('click',()=>links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+
+  document.getElementById('contactForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    const d=new FormData(this);
+    const subject=encodeURIComponent('New Spectrum Slate Project Enquiry');
+    const body=encodeURIComponent(
+      `Name: ${d.get('name')}\nEmail: ${d.get('email')}\nCompany: ${d.get('company')}\nProject Type: ${d.get('type')}\n\nProject details:\n${d.get('message')}`
+    );
+    window.location.href=`mailto:hello@spectrumslate.com?subject=${subject}&body=${body}`;
+  });
+</script>
+</body>
+</html>
