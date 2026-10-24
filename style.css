@@ -4,10 +4,10 @@
     list-style: none;
     text-decoration: none;
     font-family: sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     transition: 2s;
     scroll-behavior: smooth;
-    color: white;
+    color: #fcf8f5;
 }
 body{
     position: fixed;
@@ -18,5 +18,5 @@ div{
     height: 100%;
     position: fixed;
     overflow: hidden;
-    background-color: purple;
+    background-color: #fcf8f5;
 }
