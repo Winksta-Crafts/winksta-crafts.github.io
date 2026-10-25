@@ -1,22 +1,38 @@
+
 function HEROBANNERS() {
-    const HEROBANNERDIV=document.querySelector('.heroBanner-div');
+    const HEROBANNERDIV = document.querySelector('.heroBanner-div');
 
     fetch('/Pages/LandingPage/LandingpageBanners/herobanners.json')
-    .then(res=>res.json())
-    .then(data=>{
-        data.forEach(element => {
+        .then(res => res.json())
+        .then(data => {
 
-            //creatign scrolling divs to hold hero banners
-            const HEROBANNERHOLDER=document.createElement('div')
-            HEROBANNERHOLDER.classList.add('heroBanner-holder')
-            HEROBANNERDIV.append(HEROBANNERHOLDER)
+            HEROBANNERDIV.innerHTML = '';
 
-            //adding banner images to the created div
-            const HEROBANNER=document.createElement('img')
-            HEROBANNER.classList.add('herobanner-img')
-            HEROBANNER.src=element.herobannerimg
-            HEROBANNERHOLDER.append(HEROBANNER)
-        });
-    })
-    .catch(error=>console.log(error))
+            data.forEach(element => {
+
+                const HEROBANNERHOLDER = document.createElement('div');
+                HEROBANNERHOLDER.classList.add('heroBanner-holder');
+                HEROBANNERDIV.append(HEROBANNERHOLDER);
+
+                const HEROTEXTHOLDER=document.createElement('div')
+                HEROTEXTHOLDER.classList.add('herotextHolderdiv')
+                HEROBANNERHOLDER.append(HEROTEXTHOLDER)
+
+                const HEROBANNER = document.createElement('img');
+                HEROBANNER.classList.add('herobanner-img');
+                HEROBANNER.src = element.herobannerimg;
+                HEROBANNERHOLDER.append(HEROBANNER);
+
+                
+            });
+
+            // Duplicate the banners for an infinite loop
+            const ORIGINALBANNERS = [...HEROBANNERDIV.children];
+
+            ORIGINALBANNERS.forEach(banner => {
+                HEROBANNERDIV.append(banner.cloneNode(true));
+            });
+
+        })
+        .catch(error => console.log(error));
 }

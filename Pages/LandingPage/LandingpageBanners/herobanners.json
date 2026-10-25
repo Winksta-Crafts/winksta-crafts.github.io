@@ -1,5 +1,16 @@
 [
     {
+        "herobannerimg": "/Assets/Banners/scholastic logo-01.jpg",
+        "herobannertheme":"Want Inique? Think Winksta!"
+    },
+    {
+        "herobannerimg": "/Assets/Banners/picture1.png",
+        "herobannertheme":"Check out our latest designs!"
+    },
+    {
+        "herobannerimg": "/Assets/Banners/scholastic logo-01.jpg"
+    },
+    {
         "herobannerimg": "/Assets/Banners/picture1.png"
     },
     {

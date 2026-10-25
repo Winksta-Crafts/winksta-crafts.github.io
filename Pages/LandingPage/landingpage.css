@@ -1,14 +1,20 @@
 /*--Header section--------------------------------------------------*/
 .shop-container{
-    width: 12%;
+    width: 20%;
     height: 40px;
     background-color: #292435;
     position: relative;
     left: 0;
     border-radius: 0px 50px 50px 0px; 
 }
+a, #logo{
+    position: relative;
+    width: 100px;
+    height: auto;
+    margin: auto;
+}
 .landing-nav{
-    width: 70%;
+    width: 60%;
     height: 40px;
     background-color: #292435;
     position: relative;
@@ -42,7 +48,7 @@
 /*--Page content----------------------------------------------------*/
 .major{
     width: 100%;
-    height: 500px;
+    height: auto;
     position: fixed;
     margin-top: 0px;
     background-color: green;
@@ -50,50 +56,9 @@
     overflow-y: auto;
 }
 .heroBanner-div{
-    position: relative;
     width: 100%;
     height: 370px;
     background-color: lightseagreen;
-    display: inline-flex;
-    overflow-x: auto;
-    overflow-y: hidden;
+    display: block;
+    overflow: hidden;
 }
-/*.hero-banner1{
-    left: 0;
-    position: absolute;
-    width: 100%;
-    height: 370px;
-    background-color: yellowgreen;
-}
-.hero-banner2{
-    left: 100%;
-    position: absolute;
-    width: 100%;
-    height: 370px;
-    background-color: #3256cd;
-}
-.hero-banner3{
-    left: 200%;
-    position: absolute;
-    width: 100%;
-    height: 370px;
-    background-color: #ab4b0a;
-}
-.hero-banner4{
-    left: 300%;
-    position: absolute;
-    width: 100%;
-    height: 370px;
-    background-color: #42173c;
-}
-.hero-banner5{
-    left: 400%;
-    position: absolute;
-    width: 100%;
-    height: 370px;
-    background-color: #5d178d;
-}
-h1{
-    font-size: 100px;
-    text-align: center;
-}*/
