@@ -21,7 +21,7 @@ const landingfooterData=`
 
 function openContactsdrawer() {
     let CONTACTSWRAPPER=document.querySelector('.contacts-wrapper');
-    CONTACTSWRAPPER.style.width=70+'%';
+    CONTACTSWRAPPER.style.width=80+'%';
 
     let OPENCONTACTSBTN=document.querySelector('.open-contacts-btn');
     OPENCONTACTSBTN.style.display='none';
