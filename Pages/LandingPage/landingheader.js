@@ -1,6 +1,6 @@
 const landingheaderData=`
     <div class="shop-container">
-
+        <img  class="icons" id="cart-icon" src="/Assets/Icons/shopping-cart.png"/>
     </div>
 
     <a href="index.html"><img id="logo" src="/Assets/winkstalogo.png"/></a>

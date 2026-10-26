@@ -10,3 +10,12 @@ header{
     display:inline-flex;
     top: 20px;
 }
+footer{
+    width: 80%;
+    position: fixed;
+    background-color: transparent;
+    height: 60px;
+    bottom: 27px;
+    display: inline-flex;
+    left: 10%;
+}

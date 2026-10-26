@@ -1,4 +1,3 @@
-
 function HEROBANNERS() {
     const HEROBANNERDIV = document.querySelector('.heroBanner-div');
 
