@@ -86,7 +86,7 @@ a, #logo{
     position: absolute;
 }
 #winksta-contacts{
-    padding: 16px;
+    padding: 17px;
 }
 .contacts-wrapper{
     position: absolute;
@@ -103,8 +103,7 @@ a, #logo{
     height: auto;
     background-color: transparent;
     position: relative;
-    margin-right: 0;
-    margin-left: auto;
+    margin: auto;
     display: inline-flex;
 }
 .winksta-contact-icons{
