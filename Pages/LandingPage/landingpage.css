@@ -66,47 +66,67 @@ a, #logo{
     display: block;
     overflow: hidden;
 }
-/*--Contacts footer------------------------------------------------------------*/
+
+.our-values-holder{
+    position: relative;
+    width: 70%;
+    height: 50px;
+    background-color: #8f7bb4;
+    left: 15%;
+    border-radius: 0px 0px 15px 15px;
+}
+/*--Contacts div------------------------------------------------------------*/
+.contacts-holder{
+    width: 60px;
+    height: 80%;
+    background-color: transparent;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+}
 .open-contacts-btn{
     width: 60px;
     height: 60px;
     background-color: #292435;
+    position: absolute;
+    bottom: 0;
     border-radius: 50px;
     display: block;
-    right: 0;
-    position: absolute;
 }
 .close-contacts-btn{
-    width: 60px;
+     width: 60px;
     height: 60px;
     background-color: #292435;
+    position: absolute;
+    bottom: 0;
     border-radius: 50px;
     display: none;
-    right: 0;
-    position: absolute;
 }
 #winksta-contacts{
     padding: 17px;
 }
 .contacts-wrapper{
     position: absolute;
-    width: 0%;
-    height: 40px;
+    width: 40px;
+    height: 0%;
     background-color: #8f7bb4;
-    border-radius: 50px 0px 0px 50px;
+    border-radius: 50px 50px 0px 0px;
     right: 30px;
-    margin-top: 10px;
-    display: inline-flex;
+    left: 10px;
+    bottom: 45px;
 }
 .contact-icons-container{
-    width: 95%;
-    height: auto;
+    height: 98%;
     background-color: transparent;
-    position: relative;
-    margin: auto;
-    display: inline-flex;
+    position: absolute;
+    bottom: 8px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
-.winksta-contact-icons{
-    position: relative;
-    margin: auto;
+#winksta-contact-icons{
+    padding-top: 10px;
+    padding-bottom: 5px;
+    align-items: center;
+    margin-left: calc((100% - 25px) / 2);
 }
