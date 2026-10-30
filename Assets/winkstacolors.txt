@@ -3,3 +3,4 @@ Pink - #dfa4c7
 Blue - #a8d2df
 Purple - #8f7bb4
 Dark Purple - #292435
+Plum - #6B5F70

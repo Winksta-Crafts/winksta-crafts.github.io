@@ -1,21 +1,21 @@
 const landingContactsdata=`
     <div class="contacts-wrapper">
         <div class="contact-icons-container">
-            <a id="winksta-contact-icons" href="tel:+256781576124"><img class="icons" src="/Assets/Icons/phone.png"/></a>
-            <a id="winksta-contact-icons" href="https://mailto:winkstacrafts@gmail.com"><img class="icons" src="/Assets/Icons/email.png"/></a>
+            <a id="winksta-contact-icons" href="tel:+256781576124"><img class="icons" src="/Assets/Icons/phone-call.png"/></a>
+            <a id="winksta-contact-icons" href="https://mailto:winkstacrafts@gmail.com"><img class="icons" src="/Assets/Icons/envelope.png"/></a>
             <a id="winksta-contact-icons" href="https://wa.me/+256750520936"><img class="icons" src="/Assets/Icons/whatsapp.png"/></a>
             <a id="winksta-contact-icons" href="https://www.instagram.com/winksta_crafts?utm_source=qr&igsh=M3BjOW83aGRhNnI5"><img class="icons" src="/Assets/Icons/instagram.png"/></a>
             <a id="winksta-contact-icons" href="https://www.facebook.com/share/14vh82qgh7/"><img class="icons" src="/Assets/Icons/facebook.png"/></a>
-            <a id="winksta-contact-icons" href="tel:+256781576124"><img class="icons" src="/Assets/Icons/location.png"/></a>
+            <a id="winksta-contact-icons" href="tel:+256781576124"><img class="icons" src="/Assets/Icons/marker.png"/></a>
         </div>
     </div>
 
     <div class="open-contacts-btn" onclick="openContactsdrawer()">
-        <img class="icons" id="winksta-contacts" src="/Assets/Icons/contact.png"/>
+        <img id="winksta-contacts" src="/Assets/Icons/address-book.png"/>
     </div>
 
     <div class="close-contacts-btn" onclick="closeContactsdrawer()">
-        <img class="icons" id="winksta-contacts" src="/Assets/Icons/close.png"/>
+        <img id="winksta-contacts" src="/Assets/Icons/cross-small.png"/>
     </div>
 `;
 

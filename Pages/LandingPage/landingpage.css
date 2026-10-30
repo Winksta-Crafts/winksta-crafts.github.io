@@ -2,7 +2,7 @@
 .shop-container{
     width: 10%;
     height: 40px;
-    background-color: #292435;
+    background-color: #8f7bb4;
     position: relative;
     left: 0;
     border-radius: 0px 50px 50px 0px; 
@@ -20,7 +20,7 @@ a, #logo{
 .landing-nav{
     width: 60%;
     height: 40px;
-    background-color: #292435;
+    background-color: #8f7bb4;
     position: relative;
     margin-right: 0;
     margin-left: auto;
@@ -54,7 +54,8 @@ a, #logo{
     width: 100%;
     height: auto;
     position: fixed;
-    margin-top: 0px;
+    top: 0;
+    bottom: 0;
     background-color: green;
     overflow-x: hidden;
     overflow-y: auto;
@@ -67,14 +68,69 @@ a, #logo{
     overflow: hidden;
 }
 
+/*--brand values-----------------------------------------------------------*/
 .our-values-holder{
     position: relative;
     width: 70%;
-    height: 50px;
+    height: 55px;
     background-color: #8f7bb4;
     left: 15%;
-    border-radius: 0px 0px 15px 15px;
+    border-radius: 0px 0px 20px 20px;
+    display: inline-flex;
 }
+.elegance, .unique, .quality{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    margin-top: 7px;
+}
+#values{
+    margin-top: 7px;
+    font-size: 12px;
+}
+
+/*--featured categories---------------------------------------------*/
+.featured-categories-container{
+    width: 50%;
+    height: auto;
+    background-color: transparent;
+    position: relative;
+    margin-top: 30px;
+    display: inline-flex;
+    left: 25%;
+}
+.featured-category{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: #6B5F70;
+    border-radius: 50px;
+    margin: auto;
+}
+#featured-icons{
+    padding: 13px;
+}
+/*--Arrivals------------------------------------------------------------*/
+.new-arrivals-container{
+    margin-top: 35px;
+    width: 90%;
+    left: 5%;
+    height: auto;
+    position: relative;
+    background-color: black;
+    margin-bottom: 100px;
+    display: inline-flex;
+}
+.new-arrival-item{
+    position: relative;
+    width: 30%;
+    height: 250px;
+    background-color: pink;
+    margin: auto;
+}
+
 /*--Contacts div------------------------------------------------------------*/
 .contacts-holder{
     width: 60px;
@@ -87,29 +143,31 @@ a, #logo{
 .open-contacts-btn{
     width: 60px;
     height: 60px;
-    background-color: #292435;
+    background-color: #8f7bb4;
     position: absolute;
     bottom: 0;
     border-radius: 50px;
     display: block;
 }
 .close-contacts-btn{
-     width: 60px;
+    width: 60px;
     height: 60px;
-    background-color: #292435;
+    background-color: #8f7bb4;
     position: absolute;
     bottom: 0;
     border-radius: 50px;
     display: none;
 }
 #winksta-contacts{
+    width: 25px;
+    height: 25px;
     padding: 17px;
 }
 .contacts-wrapper{
     position: absolute;
     width: 40px;
     height: 0%;
-    background-color: #8f7bb4;
+    background-color: #8f7bb4b0;
     border-radius: 50px 50px 0px 0px;
     right: 30px;
     left: 10px;
@@ -128,5 +186,5 @@ a, #logo{
     padding-top: 10px;
     padding-bottom: 5px;
     align-items: center;
-    margin-left: calc((100% - 25px) / 2);
+    margin-left: calc((100% - 20px) / 2);
 }
