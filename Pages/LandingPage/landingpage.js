@@ -6,5 +6,7 @@ function LANDINGPAGE() {
         <footer>${landingfooterData}</footer>
     `;
 
-    HEROBANNERS();
+    HEROBANNERS()
+    LPNEWARRIVALS()
+    LANDINGPAGECOLLECTIONS()
 }

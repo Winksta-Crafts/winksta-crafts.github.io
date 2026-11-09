@@ -97,7 +97,7 @@ a, #logo{
     height: auto;
     background-color: transparent;
     position: relative;
-    margin-top: 30px;
+    margin-top: 40px;
     display: inline-flex;
     left: 25%;
 }
@@ -112,25 +112,25 @@ a, #logo{
 #featured-icons{
     padding: 13px;
 }
-/*--Arrivals------------------------------------------------------------*/
+/*New arrivals------------------------------------------------------------*/
 .new-arrivals-container{
-    margin-top: 35px;
-    width: 90%;
-    left: 5%;
-    height: auto;
     position: relative;
     background-color: black;
-    margin-bottom: 100px;
+    width: 90%;
+    left: 5%;
+    height: 250px;
+    margin-top: 40px;
+    margin-bottom: 50px;
     display: inline-flex;
 }
-.new-arrival-item{
+/*--Collections-------------------------------------------------------------*/
+.landingpagecollection{
+    width: 100%;
+    background-color: saddlebrown;
+    height: 270px;
     position: relative;
-    width: 30%;
-    height: 250px;
-    background-color: pink;
-    margin: auto;
+    margin-bottom: 50px;
 }
-
 /*--Contacts div------------------------------------------------------------*/
 .contacts-holder{
     width: 60px;
